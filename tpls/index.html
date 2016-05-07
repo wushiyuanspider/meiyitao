@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/main.js"></script>
+    <title></title>
+</head>
+<body>
+<style>
+    .foot{
+        margin-top: -90px;
+        padding-top: 0;
+    }
+    .foot .container{
+        background: url("images/foot_bg.png") no-repeat;
+        padding: 100px 0 0 0;
+    }
+</style>
+<!--top-->
+<div class="top">
+    <div class="container clearfix">
+        <h5 class="fl">欢迎来到美意陶官方网站！咨询请拨打：400-123456678</h5>
+        <ul class="clearfix fr">
+            <li class="fl"><a href="javascript:void(0);" id="setHomePage" onclick="SetHome(this)" style="behavior:url(#default#homepage);">设为首页</a></li>
+            <li class="fl"><a href="javascript:addToFavorite()">加入收藏</a></li>
+            <li class="fl"><a href="map.html">网站地图</a></li>
+        </ul>
+    </div>
+</div>
+
+<!--bannner-->
+<div class="banner">
+    <!-- 导航条-->
+    <div class="nav">
+        <div class="container clearfix">
+            <div class="logo fl">
+                <a href="index.html"><img src="images/logo.png" class="middle" alt="logo" width="65" height="65"/></a>
+            </div>
+            <ul class="navbar fr">
+                <li class="fl current">
+                    <a href="index.html">网站首页</a>
+                </li>
+                <li class="fl rlt">
+                    <a href="about.html">走进美意陶</a>
+                    <ul class="abs hide">
+                        <li><a href="about.html">品牌介绍</a></li>
+                        <li><a href="honor.html">荣誉资质</a></li>
+                        <li><a href="show.html">展厅功能</a></li>
+                        <li><a href="factory.html">工厂展示</a></li>
+                        <li><a href="process.html">产品工艺</a></li>
+                    </ul>
+                </li>
+                <li class="fl rlt">
+                    <a href="product-list.html">产品中心</a>
+                    <ul class="abs hide">
+                        <li><a href="product-list.html">瓷砖背景墙</a></li>
+                        <li><a href="product-list.html">3D瓷砖背景墙</a></li>
+                        <li><a href="product-list.html">现代瓷砖背景墙</a></li>
+                        <li><a href="product-list.html">欧式瓷砖背景墙</a></li>
+                        <li><a href="product-list.html">古典瓷砖背景墙</a></li>
+                        <li><a href="product-list.html">海洋瓷砖背景墙</a></li>
+                        <li><a href="product-list.html">抛晶砖</a></li>
+                        <li><a href="product-list.html">抛晶砖拼花</a></li>
+                        <li><a href="product-list.html">小花砖</a></li>
+                        <li><a href="product-list.html">西班牙小花砖</a></li>
+                        <li><a href="product-list.html">地中海小花砖</a></li>
+                        <li><a href="product-list.html">风情小花砖</a></li>
+                        <li><a href="product-list.html">餐厅小花砖</a></li>
+                        <li><a href="product-list.html">厨房小花砖</a></li>
+                    </ul>
+                </li>
+                <li class="fl rlt">
+                    <a href="news-center.html">新闻中心</a>
+                    <ul class="abs hide">
+                        <li><a href="news-center.html">公司动态</a></li>
+                        <li><a href="news-center2.html">行业资讯</a></li>
+                    </ul>
+                </li>
+                <li class="fl rlt">
+                    <a href="case.html">工程案例</a>
+                </li>
+                <li class="fl rlt">
+                    <a href="join.html">招商加盟</a>
+                </li>
+                <li class="fl rlt">
+                    <a href="contac.html">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 轮播图-->
+    <div class="slide rlt">
+        <!-- 图片集-->
+        <a href="#" class=""><img src="img/slide-1.png" alt="" width="1920" height="600"/></a>
+        <a href="#" class="hide"><img src="img/slide-2.jpg" alt="" width="1920" height="600"/></a>
+        <a href="#" class="hide"><img src="img/slide-3.jpg" alt="" width="1920" height="600"/></a>
+        <a href="#" class="hide"><img src="img/slide-4.jpg" alt="" width="1920" height="600"/></a>
+        <!-- 左右箭头-->
+        <i class="iconfont left abs">&#xe601;</i>
+        <i class="iconfont right abs">&#xe662;</i>
+        <!-- 小圆点-->
+        <ul class="abs clearfix">
+            <li class="active li1"></li>
+            <li class="li2"></li>
+            <li class="li3"></li>
+            <li class="li4"></li>
+        </ul>
+    </div>
+</div>
+
+<!--main-->
+<div class="main">
+    <div class="container">
+        <!-- 精品展示-->
+        <h2 class="item rlt">精品展示<span class="abs">Special exhibitions</span></h2>
+        <div class="item1">
+            <ul class="clearfix">
+                <li class="fl active"><a href="product-list.html">千层雕瓷砖背景墙</a></li>
+                <li class="fl"><a href="product-list.html">海洋瓷砖背景墙</a></li>
+                <li class="fl"><a href="product-list.html">防玉瓷砖背景墙</a></li>
+                <li class="fl"><a href="product-list.html">大理石瓷砖背景墙</a></li>
+            </ul>
+            <div class="tab tab0">
+                <a href="product-list.html"><img class="noscale" src="images/tab1.png" alt="" width="298" height="450"/></a>
+                <a href="product-detail.html" class="rlt">
+                    <img src="img/pro1.jpg" alt="" width="298" height="450"/>
+                    <div class="tip abs">
+                        <p>LINSHIMUYE</p>
+                        <p>梦中仙境</p>
+                        <p>千层雕瓷砖背景墙</p>
+                    </div>
+                </a>
+                <a href="product-detail.html.html" class="rlt">
+                    <img src="img/pro2.jpg" alt="" width="298" height="450"/>
+                    <div class="tip abs">
+                        <p>LINSHIMUYE</p>
+                        <p>梦中仙境</p>
+                        <p>千层雕瓷砖背景墙</p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="rlt">
+                    <img src="img/pro3.jpg" alt="" width="298" height="450"/>
+                    <div class="tip abs">
+                        <p>LINSHIMUYE</p>
+                        <p>梦中仙境</p>
+                        <p>千层雕瓷砖背景墙</p>
+                    </div>
+                </a>
+            </div>
+            <div class="tab tab1 hide">
+                <a href="product-list.html"><img class="noscale" src="images/tab2.jpg" alt="" width="298" height="450"/></a>
+                <a href="product-detail.html" class="rlt">
+                    <img src="img/pro4.jpg" alt="" width="298" height="450"/>
+                    <div class="tip abs">
+                        <p>LINSHIMUYE</p>
+                        <p>梦中仙境</p>
+                        <p>千层雕瓷砖背景墙</p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="rlt">
+                    <img src="img/pro1.jpg" alt="" width="298" height="450"/>
+                    <div class="tip abs">
+                        <p>LINSHIMUYE</p>
+                        <p>梦中仙境</p>
+                        <p>千层雕瓷砖背景墙</p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="rlt">
+                    <img src="img/pro2.jpg" alt="" width="298" height="450"/>
+                    <div class="tip abs">
+                        <p>LINSHIMUYE</p>
+                        <p>梦中仙境</p>
+                        <p>千层雕瓷砖背景墙</p>
+                    </div>
+                </a>
+            </div>
+            <div class="tab tab2 hide">
+                <a href="product-list.html"><img class="noscale" src="images/tab3.jpg" alt="" width="298" height="450"/></a>
+                <a href="product-detail.html" class="rlt">
+                    <img src="img/pro3.jpg" alt="" width="298" height="450"/>
+                    <div class="tip abs">
+                        <p>LINSHIMUYE</p>
+                        <p>梦中仙境</p>
+                        <p>千层雕瓷砖背景墙</p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="rlt">
+                    <img src="img/pro4.jpg" alt="" width="298" height="450"/>
+                    <div class="tip abs">
+                        <p>LINSHIMUYE</p>
+                        <p>梦中仙境</p>
+                        <p>千层雕瓷砖背景墙</p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="rlt">
+                    <img src="img/pro1.jpg" alt="" width="298" height="450"/>
+                    <div class="tip abs">
+                        <p>LINSHIMUYE</p>
+                        <p>梦中仙境</p>
+                        <p>千层雕瓷砖背景墙</p>
+                    </div>
+                </a>
+            </div>
+            <div class="tab tab3 hide">
+                <a href="product-list.html"><img class="noscale" src="images/tab4.jpg" alt="" width="298" height="450"/></a>
+                <a href="product-detail.html" class="rlt">
+                    <img src="img/pro2.jpg" alt="" width="298" height="450"/>
+                    <div class="tip abs">
+                        <p>LINSHIMUYE</p>
+                        <p>梦中仙境</p>
+                        <p>千层雕瓷砖背景墙</p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="rlt">
+                    <img src="img/pro3.jpg" alt="" width="298" height="450"/>
+                    <div class="tip abs">
+                        <p>LINSHIMUYE</p>
+                        <p>梦中仙境</p>
+                        <p>千层雕瓷砖背景墙</p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="rlt">
+                    <img src="img/pro4.jpg" alt="" width="298" height="450"/>
+                    <div class="tip abs">
+                        <p>LINSHIMUYE</p>
+                        <p>梦中仙境</p>
+                        <p>千层雕瓷砖背景墙</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- 公司风采-->
+        <div class="item2 clearfix">
+            <div class="fengcai fl">
+                <h3 class="about-title rlt">公司风采<span class="abs">Enterprise demeanor</span></h3>
+                <div class="fengcai-pic rlt">
+                    <!-- 图片集-->
+                    <a class="pic pic0" href="honor.html"><img class="i0" src="img/fengcai1.jpg" width="600" height="293" alt="充满艺术感的公司环境1"/></a>
+                    <a class="pic pic1" href="honor.html"><img class="i1" src="img/slide-1.png" width="600" height="293" alt="充满艺术感的公司环境2"/></a>
+                    <a class="pic pic2" href="honor.html"><img class="i2" src="img/slide-2.jpg" width="600" height="293" alt="充满艺术感的公司环境3"/></a>
+                    <a class="pic pic3" href="honor.html"><img class="i3" src="img/slide-3.jpg" width="600" height="293" alt="充满艺术感的公司环境4"/></a>
+                    <a class="pic pic4" href="honor.html"><img class="i4" src="img/slide-4.jpg" width="600" height="293" alt="充满艺术感的公司环境5"/></a>
+                    <!--圆点导航-->
+                    <ul class="abs clearfix">
+                        <li class="active fl">1</li>
+                        <li class="fl">2</li>
+                        <li class="fl">3</li>
+                        <li class="fl">4</li>
+                        <li class="fl">5</li>
+                    </ul>
+                    <!--标题显示-->
+                    <a href="honor.html" class="title abs"></a>
+                </div>
+            </div>
+            <!-- 公司简介-->
+            <div class="jianjie fr">
+                <h3 class="about-title rlt">公司简介<span class="abs">Company profile</span></h3>
+                <div class="profile">
+                    <img class="fl" src="img/company.png" alt=""/>
+                    <p>佛山晶鑫旺艺术陶瓷装饰公司地处中
+                        国陶瓷之乡——佛山，位于禅城区石湾沙
+                        岗新路27号，永利坚陶瓷大世界北门旁。
+                        本公司是一家集研发、生产、营销、服务
+                        于一体的大型现代化高端艺术陶瓷企业。
+                        一直以来，本公司致力于打造完美艺术空
+                        间，执着于市场调研和拓展和开发引领市
+                        执着于市场调研和拓展和开发引领市执着于市场调研和拓展和开发引领市执着于市场调研和拓展和开发引领市哈哈哈哈哈哈
+                        场潮流的高端科技艺术产品，力求塑造“术产品，力求塑造“给你一个五星级的艺术空间”的品牌形象，将技术和设计融入
+                        以人为本的解决方案中，使产品实现了空间化、艺术化、自然化的使用价值，倡导独
+                        有的、国际的、现代的、本色的、格调的、雅致的、超乎想象的...<a href="about.html">[查看详情]</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- 资讯中心-->
+        <h2 class="item rlt">资讯中心<span class="abs">News center</span></h2>
+        <div class="item3 clearfix">
+            <div class="news fl">
+                <h2>
+                    <span class="fl rlt">公司动态</span>
+                    <a class="fr" href="news-center.html">更多></a>
+                </h2>
+                <div class="first-news clearfix">
+                    <div class="news-time fl">
+                        <p>06</p>
+                        <p>2015/07</p>
+                    </div>
+                    <div class="news-img fl">
+                        <a href="news-detail.html"><img src="img/news-img.png" width="101" height="73" alt=""/></a>
+                    </div>
+                    <div class="news-content fl">
+                        <h3>这是公司动态的第一条新闻</h3>
+                        <p>最新梦幻瓷砖壁纸，采用全世界最先进材质，致力打造完美、实用、美轮美奂的家装壁纸...</p>
+                    </div>
+                </div>
+                <ul>
+                    <li class="rlt"><a class="ellipsis" href="news-detail.html">这是公司动态的第2条新闻</a><span class="abs">2015/08/21</span></li>
+                    <li class="rlt"><a class="ellipsis" href="news-detail.html">这是公司动态的第3条新闻</a><span class="abs">2015/08/21</span></li>
+                    <li class="rlt"><a class="ellipsis" href="news-detail.html">这是公司动态的第4条新闻</a><span class="abs">2015/08/21</span></li>
+                    <li class="rlt"><a class="ellipsis" href="news-detail.html">这是公司动态的第5条新闻</a><span class="abs">2015/08/21</span></li>
+                    <li class="rlt"><a class="ellipsis" href="news-detail.html">这是公司动态的第6条新闻</a><span class="abs">2015/08/21</span></li>
+                    <li class="rlt"><a class="ellipsis" href="news-detail.html">这是公司动态的第7条新闻</a><span class="abs">2015/08/21</span></li>
+                </ul>
+            </div>
+            <div class="news fl">
+                <h2>
+                    <span class="fl rlt">行业资讯</span>
+                    <a class="fr" href="news-center2.html">更多></a>
+                </h2>
+                <div class="first-news clearfix">
+                    <div class="news-time fl">
+                        <p>06</p>
+                        <p>2015/07</p>
+                    </div>
+                    <div class="news-img fl">
+                        <a href="news-detail.html"><img src="img/news-img.png" width="101" height="73" alt=""/></a>
+                    </div>
+                    <div class="news-content fl">
+                        <h3>这是行业资讯的第一条新闻</h3>
+                        <p>最新梦幻瓷砖壁纸，采用全世界最先进材质，致力打造完美、实用、美轮美奂的家装壁纸...</p>
+                    </div>
+                </div>
+                <ul>
+                    <li class="rlt"><a class="ellipsis" href="news-detail.html">这是行业资讯的第2条新闻</a><span class="abs">2015/08/21</span></li>
+                    <li class="rlt"><a class="ellipsis" href="news-detail.html">这是行业资讯的第3条新闻</a><span class="abs">2015/08/21</span></li>
+                    <li class="rlt"><a class="ellipsis" href="news-detail.html">这是行业资讯的第4条新闻</a><span class="abs">2015/08/21</span></li>
+                    <li class="rlt"><a class="ellipsis" href="news-detail.html">这是行业资讯的第5条新闻</a><span class="abs">2015/08/21</span></li>
+                    <li class="rlt"><a class="ellipsis" href="news-detail.html">这是行业资讯的第6条新闻</a><span class="abs">2015/08/21</span></li>
+                    <li class="rlt"><a class="ellipsis" href="news-detail.html">这是行业资讯的第7条新闻</a><span class="abs">2015/08/21</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--foot-->
+<div class="foot">
+    <div class="container">
+        <p>友情链接：<a href="#">寶力陶瓷</a><a href="#">佛山做网站</a><a href="#">奥普拉陶瓷</a><a href="#">合富陶瓷</a><a href="#">佛山网站建设</a><a href="#">威臣陶瓷企业</a><a href="#">佛山网络公司</a><a href="#">瓷片十大品牌</a><a href="#">喷墨微晶石柏戈斯陶瓷 </a><a href="#">时尚创新陶瓷品牌</a><a href="#">微晶石陶瓷品牌</a><a href="#">威臣陶瓷集团</a><a href="#">陶卫网</a></p>
+        <div class="line"></div>
+        <ul class="clearfix">
+            <li class="foot-nav fl rlt clearfix">
+                <a href="#">走进美意陶</a>
+                <ul>
+                    <li><a href="about.html">品牌介绍</a></li>
+                    <li><a href="honor.html">荣誉资质</a></li>
+                    <li><a href="show.html">展厅功能</a></li>
+                    <li><a href="factory.html">工厂展示</a></li>
+                    <li><a href="process.html">产品工艺</a></li>
+                </ul>
+            </li>
+            <li class="foot-nav fl rlt">
+                <a href="product-list.html">产品中心</a>
+                <ul>
+                    <li><a href="product-list.html">瓷砖背景墙</a></li>
+                    <li><a href="product-list.html">3D瓷砖背景墙</a></li>
+                    <li><a href="product-list.html">现代瓷砖背景墙</a></li>
+                    <li><a href="product-list.html">欧式瓷砖背景墙</a></li>
+                    <li><a href="product-list.html">古典瓷砖背景墙</a></li>
+                </ul>
+            </li>
+            <li class="foot-nav fl rlt">
+                <a href="news-center.html">新闻中心</a>
+                <ul>
+                    <li><a href="news-center.html">公司动态</a></li>
+                    <li><a href="news-center2.html">行业资讯</a></li>
+                </ul>
+            </li>
+            <li class="foot-nav fl rlt">
+                <a href="case.html">工程案例</a>
+                <ul>
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="foot-nav fl rlt">
+                <a href="join.html">招商加盟</a>
+                <ul>
+                    <li><a href="#"></a></li>
+                </ul>
+            </li>
+            <li class="foot-nav fl rlt">
+                <a href="contac.html">联系我们</a>
+                <ul>
+                    <li><a href="#"><img src="img/cqr.png" alt=""/></a></li>
+                </ul>
+            </li>
+            <li class="foot-nav fl rlt">
+                <a href="map.html">网站地图</a>
+                <ul>
+                    <li><a href="#"><img style="margin: 40px 20px 0 0" src="images/sina.png" alt=""/></a><a href="#"><img src="images/qq.png" alt=""/></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="line"></div>
+    <p style="text-align: center;margin-top: 10px;">公司地址: 深圳市 / 龙岗中心城 / 珠江国际广场A1栋7C-D、A1栋17B、A3栋9H    联系电话：0755-89312313    邮箱:2078140086@qq.com</p>
+    <p style="text-align: center;padding-bottom: 10px;">Copyright © 2015.深圳市木想到科技有限公司. 粤ICP备15052717号-1</p>
+</div>
+<script>
+    //收藏设置页面（首页）
+    function addToFavorite(){
+        var d="http://www.myt.com/";
+        var c="美意陶官方网站";
+        if(document.all){
+            window.external.AddFavorite(d,c);
+        }else{
+            if(window.sidebar){
+                window.sidebar.addPanel(c,d,"");
+            }else{
+                alert("对不起，您的浏览器不支持此操作!\n请您使用菜单栏或Ctrl+D收藏本站。");
+            }
+        }
+    }
+
+    //设为首页
+    function SetHome(obj){
+        try{
+            obj.style.behavior='url(#default#homepage)';
+            obj.setHomePage('http://www.myt.com/');
+        }catch(e){
+            if(window.netscape){
+                try{
+                    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+                }catch(e){
+                    alert("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入“about:config”并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+                };
+            }else{
+                alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将'http://www.myt.com/'设置为首页。");
+            };
+        };
+    };
+</script>
+</body>
+</html>

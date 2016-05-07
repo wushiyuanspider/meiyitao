@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+body { width:100%; margin:0px; border:0px; padding:0px; font:12px/20px "宋体"; color:#505050;	background-color: #d8d8d8;}
+div, ul, li, img, input, span, a, h3, h4, h2, h1, p { border:0px;	margin:0px; padding:0px; list-style:none; letter-spacing:2px;}
+a:link, a:visited, a:hover, a:active{ color:#505050; text-decoration: none;}
+#index { width:946px; height:600px; margin:60px auto; background:url(../images/bj.gif) no-repeat;}
+#index_main { width:275px; height:155px; float:left; margin:231px 0 0 491px; _margin:231px 0 0 245px; padding-top:15px;}
+#index_main li { width:275px; height:30px; margin-top:3px;}
+#index_main li span { display:block; width:180px; float:left; height:30px; line-height:30px;}
+#index_main li .span1 { text-align:right; width:60px; margin-right:5px;}
+#index_main li span .input1 { display:block; width:147px; height:22px; line-height:22px; background:url(../images/input1.jpg); padding-left:5px; margin-top:4px;}
+#index_main li span .input2 { display:block; width:75px; height:20px; line-height:20px; border:#ccc 1px solid; float:left; margin-top:3px; padding-left:5px;}
+#index_main li span img { float:left; margin:3px 0 0 10px;}
+#index_main li a { display:block; width:70px; height:27px; margin-top:9px; _margin-top:3px; margin-left:61px; _margin-left:62px; float:left;}
+#index_main li .span3 { width:80px; margin-left:10px; margin-top:7px;}
