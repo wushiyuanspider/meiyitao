@@ -1,7 +1,11 @@
 <?php
 	require("../include.php");
-	$size = 3;
+	$size = 10;
 	$page = (isset($_REQUEST['page']))? $_REQUEST['page'] : 1; 
+	global $page;
+	if($page <= 0 || $page == null || !is_numeric($page)) {
+		$page = 1;
+	}
 	$sql = "select * from em_category";
 	$totalNum = mysql_num_rows(mysql_query($sql));		//数据总数
 	$totalPage = ceil($totalNum/$size);			//总页数

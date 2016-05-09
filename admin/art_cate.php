@@ -1,8 +1,12 @@
 <!DOCTYPE HTML public>
 <?php
 require('../include.php');
-$sql = "select * from em_category";
-$res = getAll($sql);
+$size = 10;
+$page = (isset($_REQUEST['page']))? $_REQUEST['page'] : 1;
+$cates = getResultByPage("em_category", $size, $page);
+$res = recursive($cates);
+
+
 //p($res);
 //die;
 ?>
@@ -70,7 +74,7 @@ $res = getAll($sql);
 		<?php foreach($res as $val) {?>
       			  <tr>
 	   			 <td><?php echo $val['cate_id']?></td>
-				 <td><?php echo $val['cate_name']?></td>
+				 <td><?php echo $val['html'].$val['cate_name']?></td>
 				<?php if($val['show_in_nav'] == 1) {?>
 					<td class="show_in_nav"><img src="images/no.gif"/></td>
 				<?php }?>
@@ -105,8 +109,9 @@ $res = getAll($sql);
 
         <tr><td  colspan="2" class="left"></td>
         <td  colspan="7" class="right">
-        <span class="technorati" style="height:21px;">		
-		</span>
+	<span class="technorati" style="height:21px;">	
+	<?php echo showPage($page, $totalPage)?>
+	</span>
         </td></tr>
     </table>
 </div>

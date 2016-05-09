@@ -6,7 +6,7 @@ myt	|admin:后台
 
 	|libs:公共文件		common.func.php
 
-	|plugins:插件
+	|plugins:插件		百度编辑器
 
 	|images图片
 

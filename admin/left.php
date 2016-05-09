@@ -32,9 +32,17 @@
     <li> <a class="head" onClick="showsubmenu(2)" id="imgmenu2" title="文章管理">文章管理</a>
       <ul id="submenu2">
         
-                <li><a href="{:U('Admin/Article/index')}" target="rightFrame"><img src="images/left.gif" border="0" width="10" height="10">文章列表</a></li>
+                <li><a href="art_list.php" target="rightFrame"><img src="images/left.gif" border="0" width="10" height="10">文章列表</a></li>
             
                 <li><a href="art_cate.php" target="rightFrame"><img src="images/left.gif" border="0" width="10" height="10">文章分类</a></li>
+           
+      </ul>
+    </li>
+
+    <li> <a class="head" onClick="showsubmenu(3)" id="imgmenu3" title="日志管理">幻灯片管理</a>
+      <ul id="submenu3">
+       
+                <li><a href="ppt_list.php" target="rightFrame"><img src="images/left.gif" border="0" width="10" height="10">幻灯片列表</a></li>
            
       </ul>
     </li>

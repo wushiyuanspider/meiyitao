@@ -11,8 +11,9 @@ if(!empty($cateId)){
 	$sqlAll = "select * from em_category";
 	$resAll = mysql_query($sqlAll);
 	while(!false == ($res = mysql_fetch_assoc($resAll))) {
-		$cates[] = $res;
+		$arr[] = $res;
 	}
+  $cates = recursive($arr);
 //	p($cates);
 //	die;
 //p($result);
@@ -47,11 +48,11 @@ a:link, a:visited, a:hover, a:active{ color:#204155;}
 <body>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td colspan="2" align="left" valign="top"  style="padding-top:5px;padding-bottom: 5px;">　<img src="images/tb.gif" width="14" height="14" align="absmiddle"/><span class="fons">文章管理</span></td>
+    <td colspan="2" align="left" valign="top"  style="padding-top:5px;padding-bottom: 5px;">　<img src="images/tb.gif" width="14" height="14" align="absmiddle"/><span class="fons">幻灯片管理</span></td>
   </tr>
   <tr>
     <td height="30" align="left" valign="middle" bgcolor="#d3eaef" style="border-bottom:none;"><span class="STYLE3"></span></td>
-    <td width="100px" align="left" valign="middle" bgcolor="4682b4" style="border-bottom:none;"><a href="user_list.php" style="color:#fff;margin-left:25px;">文章列表</a></td>
+    <td width="100px" align="left" valign="middle" bgcolor="4682b4" style="border-bottom:none;"><a href="user_list.php" style="color:#fff;margin-left:25px;">幻灯片列表</a></td>
   </tr>
 </table>
 <table width="100%">
@@ -72,7 +73,7 @@ a:link, a:visited, a:hover, a:active{ color:#204155;}
 			<!--循环级别-->
 			<option value="0">顶级分类</option>
 			<?php if(!empty($cates)) {foreach($cates as $catename) {?>
-				<option <?php if($result['parent_id'] == $catename['cate_id']) {echo 'selected';}?> value="<?php echo $catename['cate_id']?>"><?php echo $catename['cate_name']?></option>
+				<option <?php if($result['parent_id'] == $catename['cate_id']) {echo 'selected';}?> value="<?php echo $catename['cate_id']?>"><?php echo $catename['html'].$catename['cate_name']?></option>
 			<?php }}?>
 		</select>
 	  </td>

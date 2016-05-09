@@ -131,9 +131,9 @@ switch($act) {
 			echo 0;
 		}
 		break;
-	//修改是否显示
+	//修改分类是否显示
 	case 'cate_show':
-	$id = $_GET['id'];
+		$id = $_GET['id'];
 		$num = $_GET['num'];
 		$arr = array("is_show"=>$num);
 		$result = update("em_category", $arr, "cate_id = {$id}");
@@ -154,6 +154,75 @@ switch($act) {
 		}else {
 			echo 0;
 		}
+		break;
+	case 'editeArt':
+	//	p($_POST);
+		// p($_FILES);
+		// die;
+		$img_files = $_FILES['art_img'];
+		// die;
+		$artId = $_POST['art_id'];
+
+		imageUpLoad($img_files);
+
+		$artInfo = array("art_title"=>$_POST['art_title'], "cat_id"=>'', "art_author"=>$_POST['art_author'], "art_sort"=>'', "art_img"=>"$newName", "art_open"=>$_POST['art_open'], "description"=>$_POST["description"], "content"=>$_POST['content'], "click_count"=>'', "add_time"=>time());
+		if(empty($artId)) {
+			insert("em_article", $artInfo);
+			// die;
+			showMsg("添加文章成功！", "art_list.php");
+		}else {
+			// unlink("./upload/".$newName);
+			$result = update('em_article', $artInfo, "art_id= {$artId}");
+			// var_dump($result);
+			// die;
+			showMsg('更新文章成功！', "art_list.php");
+		}
+		break;
+	case 'delart':
+		$artId = $_GET['artid'];
+		$sql = "select * from em_article where art_id = {$artId}";
+		$result = getOne($sql);
+		// p($result);
+		// die;
+		del('em_article', "art_id={$artId}");
+		unlink("./upload/".$result['art_img']);	
+		// die;
+		showMsg("删除文章成功！", 'art_list.php');
+		break;
+
+	case 'editePpt':
+		// p($_POST);
+		// die;
+		$img_files = $_FILES['sd_img'];
+		// die;
+		$sdId = $_POST['sd_id'];
+
+		imageUpLoad($img_files);
+
+		$pptInfo = array("sd_name"=>$_POST['sd_name'],"sd_cate"=>$_POST['sd_cate'],"sd_img"=>$newName,"sd_show"=>$_POST['sd_show'],"sd_description"=>$_POST['sd_description'], "sd_content"=>$_POST['sd_content']);
+		if(empty($sdId)) {
+			insert("em_slide", $pptInfo);
+			// die;
+			showMsg("添加幻灯片成功！", "ppt_list.php");
+		}else {
+			// unlink("./upload/".$newName);
+			$result = update('em_slide', $pptInfo, "sd_id= {$sdId}");
+			// var_dump($result);
+			// die;
+			showMsg('更新幻灯片成功！', "ppt_list.php");
+		}
+		break;
+
+	case 'delPpt':
+		$sdId = $_GET['sdid'];
+		$sql = "select * from em_slide where sd_id = {$sdId}";
+		$result = getOne($sql);
+		// p($result);
+		// die;
+		del('em_slide', "sd_id={$sdId}");
+		// unlink("./upload/".$result['sd_img']);	
+		// die;
+		showMsg("删除幻灯片成功！", 'ppt_list.php');
 		break;
 }
 
